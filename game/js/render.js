@@ -3,7 +3,7 @@
 // HUD and every screen. No images, no fonts loaded from anywhere.
 
 import {
-  CANVAS_W, CANVAS_H, INGREDIENTS, ingredientById,
+  CANVAS_W, CANVAS_H, DAY_LENGTH_S, INGREDIENTS, ingredientById,
   PERFECT_MIN, PERFECT_MAX, LAYOUT, DAY_SETTINGS,
 } from './config.js';
 import { findMatchingTicket } from './orders.js';
@@ -204,9 +204,9 @@ function drawBoard(ctx, state) {
       const frac = state.board.chops / 3;
       ctx.strokeStyle = '#e74c3c'; ctx.lineWidth = 7;
       ctx.beginPath(); ctx.arc(b.x + b.w / 2, b.y + 88, 48, -Math.PI / 2, -Math.PI / 2 + frac * Math.PI * 2); ctx.stroke();
-      text(ctx, state.board.chops + '/3 chops', b.x + b.w / 2, b.y + 148, 13, '#5d3a22', 'center');
+      text(ctx, state.board.chops + "/3 chops", b.x + b.w / 2, b.y + 132, 13, "#5d3a22", "center");
     } else {
-      text(ctx, 'CHOPPED ✓ — click the wok!', b.x + b.w / 2, b.y + 148, 13, '#1f6b3e', 'center');
+      text(ctx, "CHOPPED ✓ — click the wok!", b.x + b.w / 2, b.y + 132, 13, "#1f6b3e", "center");
     }
   } else {
     text(ctx, 'empty — pick a bowl below', b.x + b.w / 2, b.y + 88, 14, '#8a6a4a', 'center');

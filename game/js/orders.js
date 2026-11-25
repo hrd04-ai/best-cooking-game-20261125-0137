@@ -39,7 +39,7 @@ export function tickTickets(state, dt) {
 // Does the plate's cooked ingredients exactly match a ticket's dish?
 export function plateMatchesTicket(plate, ticket) {
   if (plate.length !== ticket.dish.needs.length) return false;
-  const have = [...plate].sort();
+  const have = plate.map((item) => item.id).sort();
   const want = [...ticket.dish.needs].sort();
   return have.every((ing, i) => ing === want[i]);
 }
