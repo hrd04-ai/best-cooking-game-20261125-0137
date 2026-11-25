@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golden Wok — Night Market Rush</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #140a1e; height: 100%; }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  #wrap { width: min(1280px, 100vw); }
+  canvas { display: block; width: 100%; height: auto; background: #1a1033; cursor: pointer; }
+  #help { color: #cbb8e0; font: 13px Verdana, sans-serif; text-align: center; padding: 8px 12px 14px; }
+  #help b { color: #ffd166; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="720"></canvas>
+  <div id="help"><b>Golden Wok — Night Market Rush.</b> Pick ingredients (click a bowl or press 1–6),
+  chop with SPACE, cook in the wok (green zone = perfect), plate it, serve with ENTER.
+  P pauses, M mutes. A complete original game — art, sounds and names all made for this stall.</div>
+</div>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
